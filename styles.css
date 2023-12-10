@@ -1,28 +1,70 @@
-/* General styles: */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 
+    --primary-bg-color: #fefefe;
     --primary-text-color: #181820;
     --secondary-text-color: #5c5c62;
-    --durability-text-color: #6a737d9c;
+    --icon-color: #6a737d;
+    --border-color: #a5d2e4;
+    --text-decoration-color: #4bb1f5;
+
+    background-color: var(--primary-bg-color);
+    transition: all 0.4s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dark-mode {
+    --primary-bg-color: #0f172a;
+    --primary-text-color: #fefefe;
+    --secondary-text-color: #d1d1d5;
     --icon-color: #6a737d;
     --border-color: #a5d2e4;
     --text-decoration-color: #4bb1f5;
 }
 
+.dog {
+    color: var(--text-decoration-color);
+}
+
+.theme-btn {
+    top: 2%;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #b2becd;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease-in-out;
+}
+
+.theme-btn:active {
+    transform: translateY(-5px);
+}
+
+.theme-btn i {
+    font-size: 1.4rem;
+    caret-color: var(--icon-color);
+    pointer-events: none;
+}
+
 .container {
+    position: relative;
     margin: 0 auto;
     padding: 0 30px;
     max-width: 900px;
@@ -32,7 +74,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 30px
+    gap: 30px;
 }
 
 .fv {
@@ -42,6 +84,7 @@ body {
 }
 
 .resume {
+    position: relative;
     margin: 50px auto;
     border: 1px solid #f5f5f5;
     box-shadow: 1px 1px 7px 7px #f5f5f5;
@@ -55,6 +98,10 @@ body {
     margin-bottom: 15px;
 }
 
+.main-info {
+    padding-top: 20px;
+}
+
 .main-info__container {
     flex: 70%;
 }
@@ -66,7 +113,7 @@ body {
 @media screen and (max-width: 576px) {
     .main-info,
     .contact_info_container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .contact_info_container {
@@ -79,10 +126,13 @@ body {
 
     .experiences {
         margin-right: 0;
+        border-bottom: 1px solid var(--text-decoration-color);
+    }
+
+    .theme-btn {
+        top: 12px;
     }
 }
-
-/* Contact info styles: */
 
 .contact-info__header,
 .contact-info__sub-header {
@@ -114,8 +164,8 @@ body {
 
 .contact-info__block--center {
     justify-content: center;
+
     align-items: center;
-    align-tracks: flex-end;
 }
 
 .contact-info__item {
@@ -124,6 +174,10 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+}
+
+.contact-info__item:hover {
+    color: var(--text-decoration-color);
 }
 
 .contact-info__item:not(:last-child) {
@@ -135,6 +189,7 @@ body {
     width: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-info__block:last-child .contact-info__item-icon-wrapper {
@@ -160,8 +215,6 @@ body {
     border-color: var(--text-decoration-color);
 }
 
-/* Intro and skills styles: */
-
 .intro {
     display: flex;
     justify-content: start;
@@ -177,22 +230,13 @@ body {
 .intro__icon {
     height: 1.1428rem;
     vertical-align: text-bottom;
-    color: var(--text-decoration-color);
-}
 
-.intro__icon path {
-    fill: var(--text-decoration-color);
+    color: var(--text-decoration-color);
 }
 
 .intro_text {
     color: var(--secondary-text-color);
     text-align: justify;
-}
-
-.skills__header {
-    color: var(--secondary-text-color);
-    text-align: center;
-    margin-bottom: 15px;
 }
 
 .skills__header,
@@ -202,6 +246,7 @@ body {
 .languages__header {
     color: var(--secondary-text-color);
     text-align: start;
+
     margin-bottom: 15px;
 }
 
@@ -219,6 +264,7 @@ body {
 .languages__list {
     margin-left: 30px;
 }
+
 .skills__item,
 .likes__item,
 .dislikes__item,
@@ -230,22 +276,23 @@ body {
     color: var(--secondary-text-color);
     margin-bottom: 5px;
 }
+
 .likes,
 .dislikes,
 .strengths,
 .weaknesses {
     color: var(--secondary-text-color);
-    font-weight: 600;
+    text-decoration: underline;
+    /* font-weight: 600; */
 }
+
 .likes__list {
     margin-bottom: 10px;
 }
 
-/* Experience and additional info styles: */
-
 .experiences {
     flex: 1 1 60%;
-    margin-right: 50px;
+    border-bottom: 1px solid var(--text-decoration-color);
 }
 
 .experiences__header {
@@ -255,7 +302,7 @@ body {
 }
 
 .experiences__header-durability {
-    color: var(--durability-text-color);
+    color: var(--icon-color);
     text-align: left;
     margin-bottom: 10px;
     font-size: 15px;
@@ -270,20 +317,20 @@ body {
 }
 
 .experiences__project {
-    margin-left: 15px;
+    border-left: 1px solid var(--icon-color);
+    padding-left: 15px;
     margin-bottom: 25px;
 }
 
 .experiences__project-header {
     display: flex;
-    justify-items: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .experiences__project-role {
-    color: var(--durability-text-color);
+    color: var(--icon-color);
     text-align: left;
     font-size: 15px;
 }
@@ -291,28 +338,51 @@ body {
 .experiences__project-name {
     color: var(--primary-text-color);
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
 }
+.experiences__project-name:hover {
+    color: var(--text-decoration-color);
+}
+
+.experiences__project-name + span {
+    color: var(--secondary-text-color);
+}
+
 .experiences__project-duration {
-    color: var(--durability-text-color);
+    font-family: 'Abel', sans-serif;
+    color: var(--secondary-text-color);
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
+    padding-top: 3px;
 }
 
 .experiences__project-stack {
     display: flex;
     gap: 10px;
+    font-size: 14px;
 }
 .experiences__project-description {
     color: var(--secondary-text-color);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
+
+.experiences__project-description a {
+    color: var(--secondary-text-color);
+}
+
+.experiences__project-description a:hover {
+    color: var(--text-decoration-color);
+}
+
 .experiences__project-stack-title {
+    color: var(--icon-color);
     font-weight: 600;
 }
+
 .experiences__project-stack-list {
+    font-family: 'Abel', sans-serif;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -321,16 +391,23 @@ body {
     color: var(--secondary-text-color);
 }
 
-.experiences__project-responsibilities {
-    color: var(--secondary-text-color);
-    padding-left: 20px;
+.education {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--text-decoration-color);
 }
 
-.education {
-    margin-bottom: 20px;
-}
 .education__header {
+    margin-bottom: 20px;
     color: var(--secondary-text-color);
+}
+
+.education__university {
+    padding-left: 15px;
+    border-left: 1px solid var(--icon-color);
+}
+.education__university:not(:last-child) {
+    margin-bottom: 25px;
 }
 
 .education__university-header {
@@ -339,8 +416,28 @@ body {
     gap: 10px;
 }
 
+.education__university-name {
+    color: var(--primary-text-color);
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 3px;
+}
+
+.education__university-durability {
+    font-family: 'Abel', sans-serif;
+    color: var(--secondary-text-color);
+    text-align: left;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+.education__university-degree {
+    color: var(--secondary-text-color);
+}
+
 .training {
-    margin-bottom: 20px;
+    padding: 20px 0;
 }
 .training__header {
     margin-bottom: 10px;
@@ -348,64 +445,46 @@ body {
 }
 
 .training__company {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 1px solid var(--icon-color);
 }
+
 .training__company-header {
     display: flex;
     gap: 10px;
+    margin-bottom: 5px;
 }
 
 .training__company-class {
+    color: var(--primary-text-color);
+    text-align: left;
+    font-size: 18px;
     font-weight: 600;
+}
+
+.training__company-class ~ span {
+    color: var(--icon-color);
+}
+
+.training__company-name {
+    color: var(--secondary-text-color);
+}
+
+.training__company-duration {
+    font-family: 'Abel', sans-serif;
+    color: var(--secondary-text-color);
+    text-align: left;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+.training__company-description {
+    color: var(--secondary-text-color);
 }
 
 .additional {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.additional-info {
-    flex: 1 1 40%;
-}
-
-.additional-info__education {
-    margin-bottom: 20px;
-}
-
-.additional-info__education-header {
-    color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.additional-info__education-university-durability {
-    color: var(--durability-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-
-.additional-info__education-university-speciality {
-    color: var(--primary-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.additional-info__education-university-name {
-    color: var(--secondary-text-color);
-}
-
-.additional-info__languages {
-    margin-bottom: 20px;
-}
-
-.additional-info__languages-header {
-    color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.additional-info__languages-item {
-    color: var(--secondary-text-color);
 }
