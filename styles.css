@@ -276,6 +276,39 @@ body {
     padding-left: 20px;
 }
 
+.education {
+    margin-bottom: 20px;
+}
+.education__header {
+    color: var(--secondary-text-color);
+}
+
+.education__university-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.training {
+    margin-bottom: 20px;
+}
+.training__header {
+    margin-bottom: 10px;
+    color: var(--secondary-text-color);
+}
+
+.training__company {
+    margin-bottom: 10px;
+}
+.training__company-header {
+    display: flex;
+    gap: 10px;
+}
+
+.training__company-class {
+    font-weight: 600;
+}
+
 .additional-info {
     flex: 1 1 40%;
 }
