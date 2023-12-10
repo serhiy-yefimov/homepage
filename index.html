@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://kit.fontawesome.com/8202a5bb59.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="styles.css" />
         <title>Résumé</title>
     </head>
+
     <body>
         <main>
             <div class="resume">
                 <div class="container">
                     <div class="resume__block">
-                        <h1 class="contact-info__header">Serhiy Yefimov</h1>
-                        <h3 class="contact-info__sub-header">Full-Stack Developer</h3>
+                        <h1 class="contact-info__header">Serhii Yefimov</h1>
+                        <h3 class="contact-info__sub-header">Front-End Developer</h3>
+
                         <div class="contact_info_container fh">
-                            <!-- contact info left -->
                             <div class="contact-info__block">
                                 <a href="tel:+30672381847" rel="author" class="contact-info__item">
                                     <div class="contact-info__item-icon-wrapper">
@@ -40,7 +44,7 @@
                             <div class="contact-info__block contact-info__block--center">
                                 <img class="contact-info__avatar" src="assets/avatar.png" alt="Avatar" />
                             </div>
-                            <!-- contact info right -->
+
                             <div class="contact-info__block">
                                 <a
                                     href="https://www.linkedin.com/in/serhiy-yefimov/"
@@ -78,8 +82,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
+
                     <div class="resume__block">
                         <div class="intro">
                             <div class="intro__icon-wrapper">
@@ -95,16 +98,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="resume__block">
-                        <div class="skills">
-                            <h3 class="skills__header">Skills</h3>
-                            <p class="skills__text">Sleep, eat, more sleep, meow, mrrr, purr.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
+
                     <div class="resume__block">
                         <div class="main-info fh">
                             <div class="additional">
@@ -120,11 +114,10 @@
                                         <li class="skills__item">Figma</li>
                                         <li class="skills__item">Responsive design</li>
                                         <li class="skills__item">Cross-browser compatibility</li>
-                                        <li class="skills__item">Attention to detail</li>
+                                        <li class="skills__item">Attention to details</li>
                                     </ul>
                                 </div>
 
-                                <!-- likes and dislikes -->
                                 <div class="likes-dislikes">
                                     <h3 class="likes-dislikes__header">Likes &amp; Dislikes</h3>
                                     <div class="likes">likes</div>
@@ -138,8 +131,8 @@
                                         </li>
                                         <li class="likes__item">playing football every Friday</li>
                                         <li class="likes__item">
-                                            learning from my dog how to enjoy life and make the most of it without
-                                            procrastination
+                                            learning from my <span class="dog">dog</span> how to enjoy life and make the
+                                            most of it without procrastination
                                         </li>
                                     </ul>
                                     <div class="dislikes">deslikes</div>
@@ -147,14 +140,14 @@
                                         <li class="dislikes__item">engaging in things that I don't enjoy</li>
                                         <li class="dislikes__item">nepotism in any areas of life</li>
                                         <li class="dislikes__item">
-                                            the fact that my dog spends more time on the sofa than I do
+                                            the fact that my <span class="dog">dog</span> spends more time on the sofa
+                                            than I do
                                         </li>
                                     </ul>
                                 </div>
 
-                                <!-- strengths and weaknesses -->
                                 <div class="strengths-weaknesses">
-                                    <h3 class="strengths-weaknesses__header">Strengths & Weaknesses</h3>
+                                    <h3 class="strengths-weaknesses__header">Strengths &amp; Weaknesses</h3>
                                     <div class="strengths">strengths</div>
                                     <ul class="strengths__list">
                                         <li class="strengths__item">
@@ -169,23 +162,22 @@
                                     <ul class="weaknesses__list">
                                         <li class="weaknesses__item">difficulty saying "no" at times</li>
                                         <li class="weaknesses__item">
-                                            devoting a lot of time to work, which my dog doesn't understand
+                                            devoting a lot of time to work, which my
+                                            <span class="dog">dog</span> doesn't understand
                                         </li>
                                     </ul>
                                 </div>
 
-                                <!-- hobbies -->
                                 <div class="hobbies">
                                     <h3 class="hobbies__header">Hobbies</h3>
                                     <ul class="hobbies__list">
                                         <li class="hobbies__item">web development</li>
                                         <li class="hobbies__item">football</li>
                                         <li class="hobbies__item">football on Friday</li>
-                                        <li class="hobbies__item">football with my Dog...</li>
+                                        <li class="hobbies__item">football with my <span class="dog">dog</span></li>
                                     </ul>
                                 </div>
 
-                                <!-- leanguages -->
                                 <div class="languages">
                                     <h3 class="languages__header">languages</h3>
                                     <ul class="languages__list">
@@ -197,10 +189,40 @@
 
                             <div class="main-info__container">
                                 <div class="experiences">
-                                    <h3 class="experiences__header">Experience</h3>
+                                    <h3 class="experiences__header">Non-Commercial Experience</h3>
                                     <div class="experiences__project">
                                         <div class="experiences__project-header">
-                                            <span class="experiences__project-role">Project -</span>
+                                            <span class="experiences__project-role">Project: </span>
+                                            <a
+                                                href="https://64c825bbd2643516407d6035--regal-profiterole-f2f9e9.netlify.app/"
+                                                target="_blank"
+                                                class="experiences__project-name"
+                                                >Travel App</a
+                                            >
+                                            <span>|</span>
+                                            <span class="experiences__project-duration">July 2023</span>
+                                        </div>
+                                        <p class="experiences__project-description">
+                                            A web application on React for <b>searching and booking trips</b>.
+                                        </p>
+                                        <div class="experiences__project-stack">
+                                            <span class="experiences__project-stack-title">Stack:</span>
+
+                                            <ul class="experiences__project-stack-list">
+                                                <li class="experiences__project-stack-item">[ React,</li>
+                                                <li class="experiences__project-stack-item">React-Router-Dom,</li>
+                                                <li class="experiences__project-stack-item">Redux Toolkit,</li>
+                                                <li class="experiences__project-stack-item">React-Toastify,</li>
+                                                <li class="experiences__project-stack-item">REST API,</li>
+                                                <li class="experiences__project-stack-item">Git,</li>
+                                                <li class="experiences__project-stack-item">BitBucket,</li>
+                                                <li class="experiences__project-stack-item">Vite.js ]</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="experiences__project">
+                                        <div class="experiences__project-header">
+                                            <span class="experiences__project-role">Project: </span>
                                             <a
                                                 href="https://siefimov.github.io/movies-search-app/"
                                                 target="_blank"
@@ -211,7 +233,7 @@
                                             <span class="experiences__project-duration">March 2023- now</span>
                                         </div>
                                         <p class="experiences__project-description">
-                                            A web application on React for searching movies by genres, years,
+                                            A web application on React for <b>searching movies</b> by genres, years,
                                             popularity, and other criteria using
                                             <a
                                                 href="https://developer.themoviedb.org/reference/intro/getting-started"
@@ -235,7 +257,7 @@
                                     </div>
                                     <div class="experiences__project">
                                         <div class="experiences__project-header">
-                                            <span class="experiences__project-role">Project -</span>
+                                            <span class="experiences__project-role">Project:</span>
                                             <a
                                                 href="https://clinquant-maamoul-af4320.netlify.app/"
                                                 target="_blank"
@@ -246,7 +268,7 @@
                                             <span class="experiences__project-duration">May 2023 - now</span>
                                         </div>
                                         <p class="experiences__project-description">
-                                            This is an application for ordering food from various shops.
+                                            This is an application for <b>ordering food</b> from various shops.
                                         </p>
                                         <div class="experiences__project-stack">
                                             <span class="experiences__project-stack-title">Stack:</span>
@@ -265,7 +287,7 @@
                                     </div>
                                     <div class="experiences__project">
                                         <div class="experiences__project-header">
-                                            <span class="experiences__project-role">Project -</span>
+                                            <span class="experiences__project-role">Project:</span>
                                             <a
                                                 href="https://siefimov.github.io/my-portfolio/"
                                                 target="_blank"
@@ -292,7 +314,7 @@
                                     </div>
                                     <div class="experiences__project">
                                         <div class="experiences__project-header">
-                                            <span class="experiences__project-role">Project -</span>
+                                            <span class="experiences__project-role">Project:</span>
                                             <a
                                                 href="https://siefimov.github.io/landing-SaaSto/"
                                                 target="_blank"
@@ -318,6 +340,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="education">
                                     <h3 class="education__header">Education</h3>
                                     <div class="education__university">
@@ -342,74 +365,67 @@
                                             Master’s degree in Accounting and Finance
                                         </p>
                                     </div>
+                                </div>
 
-                                    <div class="training">
-                                        <h3 class="training__header">Training</h3>
-                                        <div class="training__company">
-                                            <div class="training__company-header">
-                                                <p class="training__company-class">Front-end development</p>
-                                                <span>|</span>
-                                                <p class="training__company-name">Beetroot Academy</p>
-                                                <span>|</span>
-                                                <span class="training__company-duration"
-                                                    >October 2022 - April 2023</span
-                                                >
-                                            </div>
-                                            <p class="training__company-description">
-                                                Successfully completed a comprehensive course covering HTML, CSS, SCSS,
-                                                JavaScript, React, Git, and GitHub. Developed a final pet-project, a
-                                                movie search app using React.
-                                            </p>
+                                <div class="training">
+                                    <h3 class="training__header">Training</h3>
+                                    <div class="training__company">
+                                        <div class="training__company-header">
+                                            <p class="training__company-class">Full-stack JS</p>
+                                            <span>|</span>
+                                            <p class="training__company-name">Binary Studio Academy</p>
+                                            <span>|</span>
+                                            <span class="training__company-duration">Jyne 2023 - August 2023</span>
                                         </div>
-
-                                        <div class="training__company">
-                                            <div class="training__company-header">
-                                                <p class="training__company-class">HTML, CSS, Javascript</p>
-                                                <span>|</span>
-                                                <p class="training__company-name">Self-taught</p>
-                                                <span>|</span>
-                                                <span class="training__company-duration">March 2022 - now</span>
-                                            </div>
-                                            <p class="training__company-description">
-                                                Studied the fundamentals of HTML, CSS, and JavaScript on my own through
-                                                online resources and practice projects.
-                                            </p>
+                                        <p class="training__company-description">
+                                            Attended Binary Studio Academy for 12 lectures covering frontend (HTML, CSS,
+                                            JavaScript, TypeScript, React, Redux Toolkit) and backend (Node.js,
+                                            Express.js, Socket.io, Postgres, Knex, JWT, Joi) technologies.
+                                        </p>
+                                        <p class="training__company-description">
+                                            Studied programming patterns, backend structure, Docker, and JS testing.
+                                            Completed evaluated homework after each lesson.
+                                        </p>
+                                    </div>
+                                    <div class="training__company">
+                                        <div class="training__company-header">
+                                            <p class="training__company-class">Front-end development</p>
+                                            <span>|</span>
+                                            <p class="training__company-name">Beetroot Academy</p>
+                                            <span>|</span>
+                                            <span class="training__company-duration">October 2022 - April 2023</span>
                                         </div>
+                                        <p class="training__company-description">
+                                            Successfully completed a comprehensive course covering HTML, CSS, SCSS,
+                                            JavaScript, React, Git, and GitHub. Developed a final pet-project, a movie
+                                            search app using React.
+                                        </p>
                                     </div>
 
-                                    <div class="additional-info fv">
-                                        <div class="additional-info fv">
-                                            <div class="additional-info__education">
-                                                <h3 class="additional-info__education-header">Education</h3>
-                                                <div class="additional-info__education-university">
-                                                    <span class="additional-info__education-university-durability"
-                                                        >2021</span
-                                                    >
-                                                    <h3 class="additional-info__education-university-speciality">
-                                                        Cat track
-                                                    </h3>
-                                                    <p class="additional-info__education-university-name">
-                                                        Binary Studio Academy
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="additional-info__languages">
-                                                <h3 class="additional-info__languages-header">Languages</h3>
-                                                <p class="additional-info__languages-item">Meow dialect</p>
-                                                <p class="additional-info__languages-item">Ukrainian (understand)</p>
-                                                <p class="additional-info__languages-item">
-                                                    English (don't understand)
-                                                </p>
-                                            </div>
+                                    <div class="training__company">
+                                        <div class="training__company-header">
+                                            <p class="training__company-class">HTML, CSS, Javascript</p>
+                                            <span>|</span>
+                                            <p class="training__company-name">Self-taught</p>
+                                            <span>|</span>
+                                            <span class="training__company-duration">March 2022 - now</span>
                                         </div>
+                                        <p class="training__company-description">
+                                            Studied the fundamentals of HTML, CSS, and JavaScript on my own through
+                                            online resources and practice projects.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="theme-btn">
+                    <i class="fas fa-adjust"></i>
+                </div>
             </div>
+
+            <script src="./script.js"></script>
         </main>
     </body>
 </html>
