@@ -319,13 +319,11 @@ a {
 .experiences__project {
     border-left: 1px solid var(--icon-color);
     padding-left: 15px;
-    /* margin-left: 15px; */
     margin-bottom: 25px;
 }
 
 .experiences__project-header {
     display: flex;
-    /* justify-items: center; */
     align-items: center;
     gap: 10px;
     margin-bottom: 5px;
